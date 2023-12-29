@@ -62,7 +62,7 @@ export const projectlist = [
     title: "PORTFOLIO SITE",
     des: " It is a responsive portfolio site which have  skill,project,about and contact section with amzing design and hover effects.",
     codeUrl: "https://github.com/Pawansingh121/my-portfolio",
-    demoUrl: "https://pawansingh.vercel.app/",
+    demoUrl: "https://pawansingh2.vercel.app/",
     img: portfolio,
   },
   {
