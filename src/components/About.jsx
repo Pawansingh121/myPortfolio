@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-white w-full  h-[75vh]  flex flex-col items-center justify-center  md:flex-row md:justify-center gap-10 md:gap-20   "
+      className="bg-white w-full  h-[75vh]  flex flex-col items-center justify-center  md:flex-row md:justify-center gap-10 md:gap-20 mt-6 md:mt-0   "
     >
       <div data-aos="zoom-in">
         <img
