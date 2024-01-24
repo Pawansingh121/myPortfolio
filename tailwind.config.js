@@ -18,7 +18,7 @@ module.exports = {
           },
         },
       },
-      animation: { mobNav: "mobNav 0.5s " },
+      animation: { mobNav: "mobNav 0.8s " },
     },
   },
   plugins: [],

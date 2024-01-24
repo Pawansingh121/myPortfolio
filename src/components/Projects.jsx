@@ -1,14 +1,11 @@
 import React from "react";
 
 import { BsGithub } from "react-icons/bs";
-import { GrShare } from "react-icons/gr";
+import { CiShare1 } from "react-icons/ci";
 import { projectlist } from "../Data";
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="w-full min-h-screen max-h-full bg-gray-100 pt-36"
-    >
+    <section id="projects" className="w-full min-h-screen max-h-full  pt-36">
       <div className=" flex flex-col items-center  ">
         <h1 className="font-bold text-lg text-blue-600">PORTFOLIO</h1>
         <p className="text-2xl font-bold pt-4 text-center">
@@ -19,7 +16,7 @@ const Projects = () => {
         return (
           <div
             key={elm.id}
-            className="w-full h-full flex items-center justify-center  mt-8 pb-8"
+            className="w-full h-full  flex items-center justify-center  mt-8 pb-8 "
           >
             <div className="w-[990px] h-auto bg-white rounded-3xl flex flex-col md:flex-row items-center justify-around pt-6 pb-6">
               <div
@@ -33,7 +30,7 @@ const Projects = () => {
                 </p>
                 <div className="flex gap-14 justify-center pt-6">
                   <a
-                    className="flex items-center gap-2 text-lg text-gray-800 border px-3 py-1 rounded-xl shadow-xl "
+                    className="flex items-center gap-2 text-lg text-gray-800 border px-3 py-1 rounded-xl shadow-xl hover:bg-blue-800 hover:text-white transition-all duration-150 "
                     href={elm.codeUrl}
                     target="_blank"
                   >
@@ -42,12 +39,12 @@ const Projects = () => {
                   </a>
 
                   <a
-                    className="flex items-center gap-2 text-lg text-gray-800 border px-3 py-1 rounded-xl shadow-xl "
+                    className="flex items-center gap-2 text-lg text-gray-800 border px-3 py-1 rounded-xl shadow-xl hover:bg-blue-800 hover:text-white transition-all duration-150"
                     href={elm.demoUrl}
                     target="_blank"
                   >
                     <p>Live Demo</p>
-                    <GrShare />
+                    <CiShare1 />
                   </a>
                 </div>
               </div>

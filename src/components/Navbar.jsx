@@ -1,97 +1,119 @@
 import React, { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { AiOutlineClose } from "react-icons/ai";
+import { IoMenuSharp } from "react-icons/io5";
+import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const handleClick = () => setNav(!nav);
+  const [menu, setMenu] = useState(false);
+  const toggle = () => {
+    setMenu(!menu);
+    if (!menu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  };
+
   return (
-    <nav className="shadow-md fixed z-[2] flex justify-between items-center h-[80px] w-full bg-white px-12 ">
-      <h3 className="text-[#2d2e32] font-sans text-xl font-bold">Pawan.dev</h3>
-      <ul className="font-sans font-semibold text-lg text-[#2d2e32] hidden md:flex gap-8 ">
-        <li className="hover:text-blue-500 cursor-pointer">
-          <Link to="home" spy={true} smooth={true} duration={500}>
-            Home
-          </Link>
-        </li>
-        <li className="hover:text-blue-500 cursor-pointer">
-          <Link to="about" spy={true} smooth={true} duration={500}>
-            About
-          </Link>
-        </li>
-        <li className="hover:text-blue-500 cursor-pointer">
-          <Link to="projects" spy={true} smooth={true} duration={500}>
-            Projects
-          </Link>
-        </li>
-        <li className="hover:text-blue-500 cursor-pointer">
-          <Link to="contact" spy={true} smooth={true} duration={500}>
-            Contact
-          </Link>
-        </li>
-      </ul>
+    <>
+      <nav className="relative h-[80px] w-full  flex  items-center justify-between px-16 mt-2">
+        <h3 className="text-[#2d2e32] font-sans text-xl font-bold ">
+          Pawan.dev
+        </h3>
+        <div className="fixed right-16 z-[10]">
+          <button
+            onClick={toggle}
+            className={
+              menu
+                ? " h-[3rem] w-[3rem] bg-[#e94f26] rounded-xl transition-all duration-200 shadow-lg outline-none  "
+                : "h-[3rem] w-[3rem] rounded-xl transition-all duration-200 shadow-lg bg-[#e94f26] hover:bg-[#2563eb] outline-none"
+            }
+          >
+            {!menu ? (
+              <IoMenuSharp
+                size={26}
+                className="text-white absolute left-3 bottom-3"
+              />
+            ) : (
+              <IoCloseSharp
+                size={26}
+                className="text-white absolute left-3 bottom-3 "
+              />
+            )}
+          </button>
+        </div>
 
-      <div
-        onClick={handleClick}
-        className="md:hidden z-10  text-[26px] hover:text-blue-500"
-      >
-        {nav ? <AiOutlineClose /> : <AiOutlineMenu />}
-      </div>
+        <div
+          className={
+            menu
+              ? "fixed z-[2] top-0 left-0 w-full h-full bg-blue-800 transition-all duration-2000 animate-mobNav flex flex-col gap-8  md:grid   md:grid-cols-4 justify-items-center pt-[15vh]   md:pt-[25vh] text-white menu_clip shadow-xl"
+              : "hidden"
+          }
+        >
+          <div className="relative md:h-[7rem] md:w-[12rem] text-white md:border-dashed md:border-2  flex justify-center items-center rounded-xl md:shadow-xl ">
+            <p className="hidden md:block absolute top-2 left-2 text-sm ">01</p>
+            <h3 className="text-lg md:text-lg cursor-pointer hover:underline decoration-[#e94f26] decoration-2">
+              <Link
+                to="home"
+                spy={true}
+                offset={-100}
+                smooth={true}
+                duration={500}
+                onClick={toggle}
+              >
+                HOME
+              </Link>
+            </h3>
+          </div>
+          <div className="relative md:h-[7rem] md:w-[12rem] text-white md:border-2 md:border-dashed flex justify-center items-center text-xl rounded-xl md:shadow-xl">
+            <p className="hidden md:block absolute top-2 left-2 text-sm">02</p>
 
-      <ul
-        className={
-          !nav
-            ? "hidden"
-            : "  font-sans font-semibold text-lg text-[#2d2e32] absolute  top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center gap-8 animate-mobNav  "
-        }
-      >
-        <li className="hover:text-blue-500 cursor-pointer">
-          <Link
-            onClick={handleClick}
-            to="home"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            Home
-          </Link>
-        </li>
-        <li className="hover:text-blue-500 cursor-pointer">
-          <Link
-            onClick={handleClick}
-            to="about"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            About
-          </Link>
-        </li>
-        <li className="hover:text-blue-500 cursor-pointer">
-          <Link
-            onClick={handleClick}
-            to="projects"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            Projects
-          </Link>
-        </li>
-        <li className="hover:text-blue-500 cursor-pointer">
-          <Link
-            onClick={handleClick}
-            to="contact"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            Contact
-          </Link>
-        </li>
-      </ul>
-    </nav>
+            <h3 className="text-lg md:text-lg cursor-pointer hover:underline decoration-[#e94f26] decoration-2">
+              <Link
+                to="about"
+                spy={true}
+                offset={-100}
+                smooth={true}
+                duration={500}
+                onClick={toggle}
+              >
+                ABOUT
+              </Link>
+            </h3>
+          </div>{" "}
+          <div className="relative md:h-[7rem] md:w-[12rem] text-white md:border-2 md:border-dashed flex justify-center items-center text-xl rounded-xl md:shadow-xl">
+            <p className="hidden md:block absolute top-2 left-2 text-sm">03</p>
+
+            <h3 className="text-lg md:text-lg cursor-pointer hover:underline decoration-[#e94f26] decoration-2">
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={toggle}
+              >
+                PROJECTS
+              </Link>
+            </h3>
+          </div>{" "}
+          <div className="relative md:h-[7rem] md:w-[12rem] text-white md:border-2  md:border-dashed flex justify-center items-center text-xl rounded-xl md:shadow-xl">
+            <p className="hidden md:block absolute top-2 left-2 text-sm">04</p>
+
+            <h3 className="text-lg md:text-lg cursor-pointer hover:underline decoration-[#e94f26] decoration-2">
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={toggle}
+              >
+                CONTACT
+              </Link>
+            </h3>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 
