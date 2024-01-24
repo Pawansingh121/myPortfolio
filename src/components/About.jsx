@@ -12,7 +12,7 @@ const About = () => {
       id="about"
       className="bg-white w-full  h-[75vh]  flex flex-col items-center justify-center  md:flex-row md:justify-center gap-10 md:gap-20   "
     >
-      <div data-aos="fade-right" data-aos-duration="500">
+      <div data-aos="zoom-in">
         <img
           className="w-[310px] h-[250px] md:w-[410px] md:h-[350px] rounded-3xl"
           src={about}
@@ -20,8 +20,7 @@ const About = () => {
         />
       </div>
       <div
-        data-aos="fade-left"
-        data-aos-duration="500"
+        data-aos="zoom-in"
         className=" flex flex-col items-center justify-center md:flex-col md:items-start "
       >
         <h2 className="font-bold text-lg text-blue-600  ">ABOUT ME</h2>

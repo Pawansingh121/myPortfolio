@@ -16,11 +16,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="relative h-[80px] w-full  flex  items-center justify-between px-16 mt-2">
+      <nav className="relative h-[80px] w-full  flex  items-center justify-between pl-16 mt-2">
         <h3 className="text-[#2d2e32] font-sans text-xl font-bold ">
           Pawan.dev
         </h3>
-        <div className="fixed right-16 z-[10]">
+        <div className="fixed right-12 z-[10] ">
           <button
             onClick={toggle}
             className={
