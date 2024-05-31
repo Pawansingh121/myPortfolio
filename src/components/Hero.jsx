@@ -12,7 +12,7 @@ import tc from "../assets/tailwind.png";
 import { Link } from "react-scroll";
 const Hero = () => {
   return (
-    <section id="home" className=" w-full h-full md:h-screen  md:mt-20 ">
+    <section id="home" className=" w-full h-full md:h-screen pt-10 md:mt-20 ">
       <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-6">
         <div className=" flex flex-col items-center md:flex md:items-start">
           <h1 className=" text-4xl max-w-[20rem] md:text-6xl font-bold md:max-w-[34rem]  ">

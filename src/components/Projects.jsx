@@ -5,7 +5,7 @@ import { CiShare1 } from "react-icons/ci";
 import { projectlist } from "../Data";
 const Projects = () => {
   return (
-    <section id="projects" className="w-full min-h-screen max-h-full  pt-14">
+    <section id="projects" className="w-full min-h-screen max-h-full  pt-36">
       <div className=" flex flex-col items-center  ">
         <h1 className="font-bold text-lg text-blue-600">PORTFOLIO</h1>
         <p className="text-2xl font-bold pt-4 text-center">
