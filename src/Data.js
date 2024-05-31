@@ -17,14 +17,7 @@ export const projectlist = [
     demoUrl: "https://nike-app-six.vercel.app/",
     img: nikeapp,
   },
-  {
-    id: 1,
-    title: "TRAILER DEKHO",
-    des: "Category wise movies with poster,search functionality, watch trailer,watchlist & amazing hover effects",
-    codeUrl: "https://github.com/Pawansingh121/TrailerDekho",
-    demoUrl: "https://trailer-dekho-r.vercel.app/",
-    img: td,
-  },
+
   {
     id: 2,
     title: "FB CLONE",
@@ -65,14 +58,7 @@ export const projectlist = [
     demoUrl: "https://pawansingh2.vercel.app/",
     img: portfolio,
   },
-  {
-    id: 7,
-    title: "NETFLIX CLONE",
-    des: " It is a responsive Netflix Clone which have Category wise movies with poster with amzing hover effects ",
-    codeUrl: "https://github.com/Pawansingh121/netflix-design",
-    demoUrl: "https://netflix-clone-design.netlify.app/",
-    img: netflix,
-  },
+
   {
     id: 8,
     title: "PRADA CLONE",
